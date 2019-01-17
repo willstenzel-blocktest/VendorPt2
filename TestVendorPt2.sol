@@ -11,11 +11,12 @@ contract TestVendorPt2 is VendorPt2 {
     addItem("Mugs", 5);
     addItem("Ties", 30);
     addItem("Scarves", 20);
+    addItem("Sunglasses", 40);
     assert(getItemCount("Scarves") == 20);
   }
 
   function test_PurchaseItem() {
-    addItem("Sunglasses", 40);
+    test_AddItem();
     assert(getItemCount("Sunglasses") == 40);
     purchaseItem("Sunglasses");
     assert(getItemCount("Sunglasses") == 39);
