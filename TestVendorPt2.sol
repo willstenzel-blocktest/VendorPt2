@@ -17,7 +17,7 @@ contract TestVendorPt2 is VendorPt2 {
   function test_PurchaseItem() {
     addItem("Sunglasses", 40);
     assert(getItemCount("Sunglasses") == 40);
-    purchaseItem("Sunglasses")l
+    purchaseItem("Sunglasses");
     assert(getItemCount("Sunglasses") == 39);
   }
 }
